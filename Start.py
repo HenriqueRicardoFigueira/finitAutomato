@@ -5,21 +5,20 @@ import sys, copy, random
 
 
 class Start:
-	def __init__(self):
+	def __init__(self, instrucoes):
 
 		#Abre o Arquivo
-		arq = open(sys.argv[1],'r')
+		arq = open(instrucoes[1],'r')
 
 		self.linhasArq = arq.read().splitlines()
 
 		#variaveis
 		self.inputAlph = self.linhasArq[0].split(" ")
 		self.symbolNull = self.linhasArq[1].split(" ")
-		self.states = self.linhasArq[2]
-		self.initialState = self.linhasArq[3].split(" ")
+		self.states = self.linhasArq[2].split(" ")
+		self.initialState = self.linhasArq[3]
 		self.finalState = self.linhasArq[4].split(" ")
-		
-		self.tempTransitions = self.linhasArq[7:]
+		self.tempTransitions = self.linhasArq[5:]
 		self.transitions = []
 		
 		for i in self.tempTransitions:
