@@ -66,7 +66,6 @@ class PyGraph:
 
     #retorna a lista de adjascencia de um nó bidirecional
     def getAdjacentes(self, no, Letter):
-
         adjs = []
         adjsByLetter = []
 
@@ -80,19 +79,7 @@ class PyGraph:
 
         return adjsByLetter
 
-    def printGrafo(self):
-        print("\nGrafo: ")
-        sys.stdout.write("[")
-        for vertice in self.grafo:
-            sys.stdout.write("- "+str(vertice)+" ")
-        print("]")
-
-    def printAdjacencia(self):
-        print("\nAdjascencia:")
-        for vertice in self.adj:
-            sys.stdout.write(str(vertice[0])+" -> ")
-            for vertice2 in vertice[1]:
-                sys.stdout.write(str(vertice2))
-                if(not vertice[1].index(vertice2) == len(vertice[1])-1):
-                    sys.stdout.write(" | ")
-            print()
+    def retAdjacentes(self, no):
+        for linha in self.adj:
+            if(linha[0].name == no.name):
+                return linha[1]
