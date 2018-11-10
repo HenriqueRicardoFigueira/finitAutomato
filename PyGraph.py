@@ -7,13 +7,9 @@
 import sys
 
 class PyVertice:
-    def __init__(self, name, valor=0.0):
+    def __init__(self, name, valor=None):
         self.name = name
         self.valor = valor
-        self.cor = "branco"
-        self.predecessor = None
-        self.tempDescoberta = -1
-        self.tempFinalizado = -1
 
     def __str__(self):
         return str(self.name)
@@ -91,8 +87,15 @@ class PyGraph:
         return self.grafo
 
     #retorna a lista de adjascencia de um nó bidirecional
-    def getAdjacentes(self, no):
-        return self.adj[self.grafo.index(no)][1]
+    def getAdjacentes(self, no, Letter):
+        adjs = self.adj[self.grafo.index(no)][1]
+        adjsByLetter = []
+
+        for adj in adjs:
+            if(adj.symbol == Letter):
+                adjsByLetter.append(adj)
+
+        return adjsByLetter
 
     def buscaLargura(self, vertInicial):
         self.tempo = 0
