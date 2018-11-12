@@ -21,36 +21,86 @@ Clone ou faça o Download do projeto em .zip (via terminal/manual) para sua maqu
 ### Documentação
   -START
 
-    -funcionamento:
-        Responsável por quebrar o arquivo, colher corretamente os dados e retorna-los .
-        -Variaveis
+   	-funcionamento:
+        	Responsável por quebrar o arquivo, colher corretamente os dados e retorna-los .
+        	-Variaveis:
 		      
-          inputAlph
-		      symbolNull
-		      states
-		      initialState
-		      finalState
-		      tempTransitions
-          
-        -Métodos
-          
-          def getInputAlph():
-            Retorna alfabeto de entrada.
-		      def getSimbol():
-            Retorna símbolo em branco.
-		      def getStates():
-            Retorna estados.
-          def getInitial():
-            Retorna estado inicial.
-		      def getFinal():
-            Retorna lista de estados finais.
-          def getTrans():
-            Retorna lista de transições.
- 
+          		inputAlph
+			symbolNull
+			states
+			initialState
+		 	finalState
+			tempTransitions
+
+		-Métodos:
+			#retorna alfabeto de entrada.
+			def getInputAlph(self):
+		    		
+			#retorna símbolo em branco.
+			def getSimbol(self):
+		    	
+			#retorna lista de estados.	
+			def getStates(self):
+			
+			#retorna estado inicial.	
+		  	def getInitial(self):
+		    		
+			#retorna lista de estados finais.	
+			def getFinal(self):
+		    	
+			#retorna lista de transições.
+ 			def getTrans(self):
+		    		
   -Pygraph
+  
+  	-funcionamento:
+		Responsavel pela criação do grafo e suas arestas.
+		
+	-Métodos:
+	
+   		#função para inserir dois nos e suas arestas ou uma aresta somente
+    		def inserirNo(self, vertice):
+        	
+		#verifica se existe um vertice com o nome ja no grafo
+		def verificaNomeVertice(self, vertice):
+  
+
+    		#verifica se existe um vertice com o nome ja no grafo
+    		def retornVertByName(self, name):
     
 
-  -FITA
+    		#função para inserir uma nova aresta
+    		def inserirAdj(self, vertice, vertice2, symbol):
+
+    		#retorna a lista de adjascencia de um nó bidirecional
+    		def getAdjacentes(self, no, Letter):
+
+
+    		def retAdjacentes(self, no):
+
+  
+    
+
+  -AF
+  
+  	-funcionamento:
+		Responsavel por inserir estados no grafo, inserir transações nas arestas, marcar estados finais
+		fazer a verificação de aceitação ou rejeição e caminhar no grafo.
+	
+	-Métodos:
+		#retorna estado que está sendo processado no momento
+		def getCurrentState(self, state):
+ 		
+		#verifica a aceitação ou rejeição de uma palavra, tratando todos os casos que aceita ou
+		rejeita. Na questão do não-determinismo, verifica quantas transações são possiveis para a 
+		letra que está sendo processada, caminhando para todas possiveis e aplicando o tratamento de 
+		aceitação ou rejeição. Quando uma transação "morre" ela vai para uma lista de remoções e é removida
+		após a execução.
+		def isEnd(self):
+    		
+		#caminnha com as transçãoes dentro do grafo.
+		def caminha(self):
+
     
 
 
