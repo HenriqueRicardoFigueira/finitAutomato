@@ -58,11 +58,11 @@ Clone ou faça o Download do projeto em .zip (via terminal/manual) para sua maqu
 		
 	-Métodos:
 	
-   		#função para inserir dois nos e suas arestas ou uma aresta somente
+   			#função para inserir dois nos e suas arestas ou uma aresta somente
     		def inserirNo(self, vertice):
         	
-		#verifica se existe um vertice com o nome ja no grafo
-		def verificaNomeVertice(self, vertice):
+			#verifica se existe um vertice com o nome ja no grafo
+			def verificaNomeVertice(self, vertice):
   
 
     		#verifica se existe um vertice com o nome ja no grafo
@@ -98,7 +98,8 @@ Clone ou faça o Download do projeto em .zip (via terminal/manual) para sua maqu
 		após a execução.
 		def isEnd(self):
     		
-		#caminnha com as transçãoes dentro do grafo.
+		#caminnha com as transçãoes dentro do grafo, recuperando uma lista de adjacentes e verificando a quantidade de transações
+		possiveis.
 		def caminha(self):
 
     
