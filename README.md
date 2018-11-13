@@ -99,7 +99,7 @@ Clone ou faça o Download do projeto em .zip (via terminal/manual) para sua maqu
 		def isEnd(self):
     		
 		#caminnha com as transçãoes dentro do grafo, recuperando uma lista de adjacentes e verificando a quantidade de transações
-		possiveis.
+		possiveis. Consumindo a palavra, criando um novo vértice, acrescentando no grafo e removendo o anterior da lista.
 		def caminha(self):
 
     
